@@ -5,11 +5,11 @@ import { Outlet } from "react-router-dom"
 function App() {
 
 	return (
-		<div className="font-display">
+		<div className="min-h-screen font-display">
 				<Header />
-			<div className="min-h-screen font-display md:flex">
+			<div className="font-display md:flex">
 				<Navbar />
-				<main className="p-4">
+				<main className="h-screen w-full p-10 md:p-6 bg-primary">
 					<Outlet />
 				</main>
 			</div>
