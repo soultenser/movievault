@@ -18,8 +18,8 @@ export default function LanguageSelector() {
         onChange={(e) => changeLanguage(e.target.value)}
         className="p-g pl-4 pr-4 pt-1 pb-1 text-lg md:text-xl rounded border border-clear"
       >
-        <option value="it" className='text-primary'>Italiano</option>
         <option value="en" className='text-primary'>English</option>
+        <option value="it" className='text-primary'>Italiano</option>
       </select>
     </div>
   );

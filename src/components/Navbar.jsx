@@ -12,7 +12,7 @@ export default function Navbar()
     const { t } = useTranslation();
     return(
         <nav className="bg-primary text-neutral">
-            <ul className="hidden md:flex flex-col p-8 gap-4 text-2xl w-75">
+            <ul className="hidden md:flex flex-col p-8 gap-6 text-2xl w-75">
                 <li>
                     <Link to="/" className="focus:text-accent hover:text-accent"> 
                     <FontAwesomeIcon icon={faFilm} className="mr-4"/>

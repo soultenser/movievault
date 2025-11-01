@@ -4,7 +4,7 @@
     "favorites": "Favorites",
     "settings": "Settings",
     "add_movie": "Add Movie",
-    "search": "Search",
+    "search_placeholder": "Search a movie...",
     "searching": "Searching",
     "language": "Language"
 }
