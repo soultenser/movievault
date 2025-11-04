@@ -1,4 +1,4 @@
-export default function FilmDetail()
+export default function MovieDetail()
 {
 	return (
     	<div className="min-h-screen flex items-center justify-center">

@@ -11,35 +11,38 @@ export default function Navbar()
 {
     const { t } = useTranslation();
     return(
-        <nav className="bg-primary text-neutral">
-            <ul className="hidden md:flex flex-col p-8 gap-6 text-2xl w-75">
+        <>
+        <nav className="bg-primary text-neutral hidden h-full md:block md:fixed top-30 left-0">
+            <ul className="hidden md:flex flex-col p-8 gap-8 text-xl w-74">
                 <li>
-                    <Link to="/" className="focus:text-accent hover:text-accent"> 
-                    <FontAwesomeIcon icon={faFilm} className="mr-4"/>
+                    <Link to="/" className="focus:text-accent hover:text-accent flex items-center"> 
+                    <FontAwesomeIcon icon={faFilm} className="mr-4 text-3xl"/>
                     {t('watchlist')}
                     </Link>
                 </li>
                 <li>
-                    <Link to="/watched" className="focus:text-accent hover:text-accent"> 
-                    <FontAwesomeIcon icon={faEye} className="mr-4" />
+                    <Link to="/watched" className="focus:text-accent hover:text-accent flex items-center"> 
+                    <FontAwesomeIcon icon={faEye} className="mr-4 text-3xl" />
                     {t('watched')} 
                     </Link>
                 </li>
                 <li>
-                    <Link to="/favorites" className="focus:text-accent hover:text-accent"> 
-                    <FontAwesomeIcon icon={faStar} className="mr-4" />
+                    <Link to="/favorites" className="focus:text-accent hover:text-accent flex items-center"> 
+                    <FontAwesomeIcon icon={faStar} className="mr-4 text-3xl" />
                     {t('favorites')}
                     </Link>
                 </li>
                 <li>
-                    <Link to="/settings" className="focus:text-accent hover:text-accent"> 
-                    <FontAwesomeIcon icon={faGear} className="mr-4" />
+                    <Link to="/settings" className="focus:text-accent hover:text-accent flex items-center"> 
+                    <FontAwesomeIcon icon={faGear} className="mr-4 text-3xl" />
                     {t('settings')} 
                     </Link>
                 </li>
             </ul>
+        </nav>
 
-            <ul className="flex md:hidden justify-around gap-2 fixed bottom-0 left-0 bg-primary w-full p-4 text-sm">
+        <nav className="md:hidden block fixed bottom-0 left-0 bg-primary text-neutral border-2 border-accent">
+            <ul className="grid grid-cols-4 md:hidden fixed bottom-0 left-0 bg-primary w-full p-4 text-sm">
                 <li>
                     <Link to="/" className="focus:text-accent hover:text-accent flex flex-col text-center justify-center items-center gap-2"> 
                     <FontAwesomeIcon icon={faFilm} className="text-2xl "/>                    
@@ -66,5 +69,6 @@ export default function Navbar()
                 </li>
             </ul>
         </nav>
+        </>
     );
 }

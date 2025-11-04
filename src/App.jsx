@@ -9,7 +9,7 @@ function App() {
 				<Header />
 			<div className="font-display md:flex bg-primary">
 				<Navbar />
-				<main className="min-h-screen w-full md:mr-8 md:ml-0 p-10 md:p-6">
+				<main className="min-h-screen w-full md:mt-20 md:ml-78 md:mr-8 p-10 md:p-6">
 					<Outlet />
 				</main>
 			</div>

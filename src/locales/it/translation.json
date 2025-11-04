@@ -1,10 +1,15 @@
 {
+    "api_language": "it-IT",
     "watchlist": "Watchlist",
     "watched": "Guardati",
     "favorites": "Preferiti",
     "settings": "Opzioni",
     "add_movie": "Aggiungi Film",
     "search_placeholder": "Cerca un film...",
+    "modal_h2": "Cerca un film",
+    "modal_search_placeholder": "Digita il nome di un film...",
+    "search_term_true": "Cercando tra i film...",
+    "search_term_false": "Inizia digitare per cercare.",
     "searching": "Ricerca",
     "language": "Lingua"
 }

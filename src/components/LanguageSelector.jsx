@@ -5,8 +5,6 @@ export default function LanguageSelector() {
 
   const changeLanguage = (lang) => {
     i18n.changeLanguage(lang);
-    // salva la scelta in localStorage per ricordarla
-    localStorage.setItem('language', lang);
   };
 
   return (
