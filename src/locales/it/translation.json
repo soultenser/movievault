@@ -5,11 +5,14 @@
     "favorites": "Preferiti",
     "settings": "Opzioni",
     "add_movie": "Aggiungi Film",
+    "add_watchlist": "Aggiungi alla Watchlist",
     "search_placeholder": "Cerca un film...",
     "modal_h2": "Cerca un film",
     "modal_search_placeholder": "Digita il nome di un film...",
     "search_term_true": "Cercando tra i film...",
     "search_term_false": "Inizia digitare per cercare.",
     "searching": "Ricerca",
-    "language": "Lingua"
+    "language": "Lingua",
+    "genres": "Generi:",
+    "votes": "voti"
 }

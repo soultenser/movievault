@@ -18,7 +18,7 @@ export default function AddMovieModal({ isOpen, onClose }) {
 
     const delayDebounce = setTimeout(async () => {
       setLoading(true);
-      const movies = await searchMovies(searchTerm);
+      const movies = await searchMovies(searchTerm, t("api_language"));
       setResults(movies);
       setLoading(false);
     }, 300); // debounce per non spammare l'API
@@ -78,6 +78,7 @@ export default function AddMovieModal({ isOpen, onClose }) {
               <Link
                 to={`/movie/${movie.id}`}
                 onClick={onClose}
+                id={movie.id}
                 key={movie.id}
                 className="flex items-center gap-3 p-2 bg-panel mb-1 shadow-md rounded-xl hover:bg-panel/60 cursor-pointer transition"
               >
