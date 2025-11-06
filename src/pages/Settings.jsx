@@ -5,7 +5,7 @@ export default function Settings() {
     const { t } = useTranslation();
 
     return (
-        <div className= "w-full bg-primary">
+        <div className= "w-full bg-primary p-8 md:p-0">
             <h1 className="text-clear font-display text-2xl md:text-3xl mb-2">{t('settings')}</h1>
             <div className="container w-full pt-4 pb-4 md:block flex justify-center items-center ">
                 <LanguageSelector />

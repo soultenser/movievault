@@ -35,7 +35,7 @@ export default function MovieDetail() {
             className="rounded-2xl w-70 object-cover"
           />
         )}
-        <div className="w-full relative">
+        <div className="w-full">
           <h1 className="text-3xl font-bold mb-2">{movie.title}</h1>
           <p className="text-neutral-400 mb-4 italic">{movie.tagline}</p>
           <p className="mb-4">{movie.overview}</p>
@@ -75,13 +75,6 @@ export default function MovieDetail() {
 					)}
 				</div>
 			</div>
-
-			<div className="w-full flex justify-center absolute bottom-0">
-				<AddMovieButton 
-				label={t("add_watchlist")} 
-				className="bg-panel hover:bg-panel/60 active:bg-panel p-4 w-2xl rounded-xl shadow-md flex items-center justify-center gap-2"
-				/>
-			</div>
         </div>
       </div>
 
@@ -104,29 +97,29 @@ export default function MovieDetail() {
         <div>
           <p className="mb-4">{movie.overview}</p>
 
-		  <div className="w-full flex items-center gap-4">
+		  <div className="w-full flex items-center gap-3 mb-1">
 			<FontAwesomeIcon icon={faStar} className="text-accent"/>
-			<p className="text-md text-neutral">
+			<p className="text-sm text-neutral">
 				{movie.vote_average?.toFixed(1)} / 10 ({movie.vote_count} {t("votes")})
 			</p>
 		  </div>
 
-		  <div className="w-full flex items-center gap-4">
+		  <div className="w-full flex items-center gap-3 mb-1">
 			<FontAwesomeIcon icon={faCalendar} className="text-accent"/>
-			<p className="text-md text-neutral">
+			<p className="text-sm text-neutral">
 				{movie.release_date}
 			</p>
 		  </div>
 
-		  <div className="w-full flex items-center gap-4">
+		  <div className="w-full flex items-center gap-3 mb-1">
 			<FontAwesomeIcon icon={faStopwatch} className="text-accent"/>
-			<p className="text-md text-neutral">
+			<p className="text-sm text-neutral">
 				{movie.runtime} min
 			</p>
 		  </div>
 
-		  	<div className="mt-4 w-full">
-				<p>{ t("genres") }</p>
+		  	<div className="mt-4 w-full mb-4">
+				<p className="text-md">{ t("genres") }</p>
 				<div className="flex gap-2 mt-2 text-xs">
 					{movie.genres.map((genre) => {
 						return (
@@ -139,17 +132,14 @@ export default function MovieDetail() {
 					)}
 				</div>
 			</div>
-
-			<div className="w-full flex justify-center mt-2 ">
-				<AddMovieButton 
+    	</div>
+    </div>
+	  	<div className="w-full flex items-center justify-center mt-4 md:mt-8">
+			<AddMovieButton 
 				label={t("add_watchlist")} 
-				className="flex gap-4 items-center justify-center w-full bg-panel p-4 mt-2 mb-2 rounded-xl shadow-md hover:bg-panel/60 active:bg-panel/60"
-				/>
-			</div>
-        </div>
-
-
-      </div>
+				className="bg-panel hover:bg-panel/60 active:bg-panel p-4 w-full lg:w-3xl rounded-xl shadow-md flex items-center justify-center gap-2"
+			/>
+		</div>
     </div>
   );
 }

@@ -13,29 +13,29 @@ export default function Navbar()
     return(
         <>
         <nav className="bg-primary text-neutral hidden h-full md:block md:fixed top-30 left-0">
-            <ul className="hidden md:flex flex-col p-8 gap-8 text-xl w-74">
+            <ul className="hidden md:flex flex-col p-8 gap-8 text-xl lg:w-74">
                 <li>
-                    <Link to="/" className="focus:text-accent hover:text-accent flex items-center"> 
-                    <FontAwesomeIcon icon={faFilm} className="mr-4 text-3xl"/>
-                    {t('watchlist')}
+                    <Link to="/" className="focus:text-accent hover:text-accent flex lg:flex-row md:flex-col gap-2 lg:gap-4 items-center"> 
+                        <FontAwesomeIcon icon={faFilm} className="text-3xl"/>
+                        {t('watchlist')}
                     </Link>
                 </li>
                 <li>
-                    <Link to="/watched" className="focus:text-accent hover:text-accent flex items-center"> 
-                    <FontAwesomeIcon icon={faEye} className="mr-4 text-3xl" />
-                    {t('watched')} 
+                    <Link to="/watched" className="focus:text-accent hover:text-accent flex lg:flex-row md:flex-col gap-2 lg:gap-4 items-center"> 
+                        <FontAwesomeIcon icon={faEye} className="text-3xl" />
+                        {t('watched')} 
                     </Link>
                 </li>
                 <li>
-                    <Link to="/favorites" className="focus:text-accent hover:text-accent flex items-center"> 
-                    <FontAwesomeIcon icon={faStar} className="mr-4 text-3xl" />
-                    {t('favorites')}
+                    <Link to="/favorites" className="focus:text-accent hover:text-accent flex lg:flex-row md:flex-col gap-2 lg:gap-4  items-center"> 
+                        <FontAwesomeIcon icon={faStar} className="text-3xl" />
+                        {t('favorites')}
                     </Link>
                 </li>
                 <li>
-                    <Link to="/settings" className="focus:text-accent hover:text-accent flex items-center"> 
-                    <FontAwesomeIcon icon={faGear} className="mr-4 text-3xl" />
-                    {t('settings')} 
+                    <Link to="/settings" className="focus:text-accent hover:text-accent flex lg:flex-row md:flex-col gap-2 lg:gap-4  items-center"> 
+                        <FontAwesomeIcon icon={faGear} className="text-3xl" />
+                        {t('settings')} 
                     </Link>
                 </li>
             </ul>
