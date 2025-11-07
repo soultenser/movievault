@@ -94,7 +94,7 @@ export default function MovieDetail() {
           />
         )}
 
-        <div>
+        <div className="w-full">
           <p className="mb-4">{movie.overview}</p>
 
 		  <div className="w-full flex items-center gap-3 mb-1">
@@ -119,7 +119,7 @@ export default function MovieDetail() {
 		  </div>
 
 		  	<div className="mt-4 w-full mb-4">
-				<p className="text-md">{ t("genres") }</p>
+				<p className="text-sm">{ t("genres") }</p>
 				<div className="flex gap-2 mt-2 text-xs">
 					{movie.genres.map((genre) => {
 						return (
