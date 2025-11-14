@@ -70,9 +70,7 @@ export default function MovieDetail() {
 							<p>{ genre.name }</p>
 						</div>
 						)
-					}
-					
-					)}
+					})}
 				</div>
 			</div>
         </div>
@@ -127,9 +125,7 @@ export default function MovieDetail() {
 							<p>{ genre.name }</p>
 						</div>
 						)
-					}
-					
-					)}
+					})}
 				</div>
 			</div>
     	</div>

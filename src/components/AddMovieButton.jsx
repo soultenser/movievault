@@ -8,10 +8,11 @@ export default function AddMovieButton({
 }) {
     return (
         <button 
-        onClick={onClick} 
-        className={className}>
-        <FontAwesomeIcon icon={faPlus} className="text-accent"/>
-        <span>{label}</span>
+            onClick={onClick} 
+            className={className}
+        >
+            <FontAwesomeIcon icon={faPlus} className="text-accent"/>
+            <span>{label}</span>
         </button>
     )
 }

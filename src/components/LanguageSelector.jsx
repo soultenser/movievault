@@ -1,11 +1,20 @@
 import { useTranslation } from 'react-i18next';
+import { useEffect } from 'react';
 
 export default function LanguageSelector() {
   const { i18n, t } = useTranslation();
 
-  const changeLanguage = (lang) => {
+  const changeLanguage = async (lang) => {
     i18n.changeLanguage(lang);
+    localStorage.setItem('app-language', lang);
   };
+
+  useEffect(() => {
+    const savedLang = localStorage.getItem('app-language');
+    if (savedLang && savedLang !== i18n.language) {
+      i18n.changeLanguage(savedLang);
+    }
+  }, [i18n]);
 
   return (
     <div className="language-selector text-clear w-full md:block flex justify-between items-center">
