@@ -1,5 +1,5 @@
-import FlexContainer from "../components/watchlist-box/FlexContainer"
-import MovieCard from "../components/watchlist-box/MovieCard"
+import FlexContainer from "../components/movies-container/FlexContainer"
+import MovieCard from "../components/movies-container/MovieCard"
 import { useMovieDB } from "../hooks/useMovieDB"
 import { useState, useEffect } from "react";
 
@@ -22,7 +22,7 @@ export default function Home() {
     	<div className="pr-4 pl-4 md:pr-0 md:pl-0 lg:flex lg:gap-8">
 			<FlexContainer>
 				{movies.map(movie => (
-					<MovieCard movie={movie} key={movie.id} />
+					<MovieCard movie={movie} Key={movie.id} />
 				))}
 			</FlexContainer>
 			<aside className="bg-panel w-2/5 rounded-2xl hidden xl:block">

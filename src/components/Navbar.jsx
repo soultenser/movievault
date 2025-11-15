@@ -1,10 +1,8 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFilm } from "@fortawesome/free-solid-svg-icons";
-import { faEye } from "@fortawesome/free-solid-svg-icons";
+import { faFilm, faEye, faGear, faHeart } from "@fortawesome/free-solid-svg-icons";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
-import { faGear } from "@fortawesome/free-solid-svg-icons";
 
 
 export default function Navbar()
@@ -28,7 +26,7 @@ export default function Navbar()
                 </li>
                 <li>
                     <Link to="/favorites" className="focus:text-accent hover:text-accent flex 2xl:flex-row md:flex-col gap-2 lg:gap-4  items-center"> 
-                        <FontAwesomeIcon icon={faStar} className="text-3xl lg:text-4xl" />
+                        <FontAwesomeIcon icon={faHeart} className="text-3xl lg:text-4xl" />
                         {t('favorites')}
                     </Link>
                 </li>
@@ -57,7 +55,7 @@ export default function Navbar()
                 </li>
                 <li>
                     <Link to="/favorites" className="focus:text-accent hover:text-accent text-center flex flex-col justify-center items-center gap-2"> 
-                    <FontAwesomeIcon icon={faStar} className="text-2xl" />
+                    <FontAwesomeIcon icon={faHeart} className="text-2xl" />
                     {t('favorites')}
                     </Link>
                 </li>
