@@ -12,7 +12,7 @@ export default function Header() {
 
     return (
         <header className="bg-primary p-8 pr-8 md:flex w-full">
-            <div className="hidden md:flex h-30 pl-8 pr-8 justify-between w-full gap-8 items-center fixed top-0 left-0 bg-primary">
+            <div className="hidden md:flex h-25 pl-8 pr-8 justify-between w-full gap-8 items-center fixed top-0 left-0 bg-primary">
                 <Link to="/" className="text-clear text-3xl lg:text-4xl font-semibold lg:mr-4"> MOVIEVAULT </Link>
                 <SearchBar placeholder={t('search_placeholder')}/>
                 <AddMovieButton label={t('add_movie')} onClick={() => setModalOpen(true)}/>
