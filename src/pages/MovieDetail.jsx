@@ -4,6 +4,7 @@ import { getMovieDetails } from "../api/tmdb"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStopwatch, faCalendar, faStar } from "@fortawesome/free-solid-svg-icons";
 import { useTranslation } from "react-i18next";
+import  { useMovieDB }  from "../hooks/useMovieDB";
 import AddMovieButton from "../components/AddMovieButton";
 
 export default function MovieDetail() {
@@ -11,6 +12,7 @@ export default function MovieDetail() {
   const { t } = useTranslation();
   const [movie, setMovie] = useState(null);
   const [error, setError] = useState(null);
+  const { addMovie } = useMovieDB();
 
   useEffect(() => {
     const loadMovie = async () => {
@@ -132,6 +134,7 @@ export default function MovieDetail() {
     </div>
 	  	<div className="w-full flex items-center justify-center mt-4 md:mt-8">
 			<AddMovieButton 
+				onClick={() => addMovie('toWatch', movie)}
 				label={t("add_watchlist")} 
 				className="bg-panel hover:bg-panel/60 active:bg-panel p-4 w-full lg:w-3xl rounded-xl shadow-md flex items-center justify-center gap-2"
 			/>

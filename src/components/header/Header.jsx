@@ -3,7 +3,6 @@ import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import SearchBar from "./SearchBar";
 import AddMovieButton from "../AddMovieButton";
-import ProfileButton from "./ProfileButton";
 import AddMovieModal from "../AddMovieModal";
 
 export default function Header() {
@@ -17,7 +16,6 @@ export default function Header() {
                 <Link to="/" className="text-clear text-3xl lg:text-4xl font-semibold lg:mr-4"> MOVIEVAULT </Link>
                 <SearchBar placeholder={t('search_placeholder')}/>
                 <AddMovieButton label={t('add_movie')} onClick={() => setModalOpen(true)}/>
-                <ProfileButton />
             </div>
             <div className="md:hidden w-full">
                 <div className="flex justify-between items-center w-full gap-6 md:m-0 mb-6">
