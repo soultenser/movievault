@@ -38,7 +38,7 @@ export default function AddMovieModal({ isOpen, onClose }) {
           {/* Bottone di chiusura */}
           <button
             onClick={onClose}
-            className="text-accent flex items-center justify-center w-10 h-10 bg-panel hover:bg-panel/60 active:bg-panel shadow-md rounded-full text-2xl leading-none"
+            className="text-accent flex items-center active:shadow-none sm:active:bg-panel justify-center w-10 h-10 bg-panel hover:bg-panel/60 active:bg-panel shadow-md rounded-full text-2xl leading-none"
             aria-label="Close"
           >
             ×
@@ -80,7 +80,7 @@ export default function AddMovieModal({ isOpen, onClose }) {
                 onClick={onClose}
                 id={movie.id}
                 key={movie.id}
-                className="flex items-center gap-3 p-2 bg-panel mb-1 shadow-md rounded-xl hover:bg-panel/60 cursor-pointer transition"
+                className="flex items-center gap-3 p-2 bg-panel mb-1 shadow-md rounded-xl hover:bg-panel/60 active:bg-panel/60 cursor-pointer transition"
               >
                 <img
                   src={

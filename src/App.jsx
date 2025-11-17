@@ -1,8 +1,19 @@
 import Navbar from "./components/Navbar"
 import Header from "./components/header/Header"
 import { Outlet } from "react-router-dom"
+import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 function App() {
+
+	const { i18n } = useTranslation();
+
+	useEffect(() => {
+		const savedLang = localStorage.getItem('app-language');
+		if (savedLang && savedLang !== i18n.language) {
+			i18n.changeLanguage(savedLang);
+		}
+	}, []);
 
 	return (
 		<div className="min-h-screen font-display bg-primary">

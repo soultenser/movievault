@@ -136,7 +136,7 @@ export default function MovieDetail() {
 			<AddMovieButton 
 				onClick={() => addMovie('toWatch', movie)}
 				label={t("add_watchlist")} 
-				className="bg-panel hover:bg-panel/60 active:bg-panel p-4 w-full lg:w-3xl rounded-xl shadow-md flex items-center justify-center gap-2"
+				className="bg-panel hover:bg-panel/60 active:bg-panel active:shadow-none sm:active:bg-panel p-4 w-full lg:w-3xl rounded-xl shadow-md flex items-center justify-center gap-2"
 			/>
 		</div>
     </div>
