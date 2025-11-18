@@ -15,5 +15,6 @@
     "language": "Language",
     "genres": "Genres:",
     "votes": "votes",
-    "detail_button": "Details"
+    "detail_button": "Details",
+    "remove": "Remove"
 }

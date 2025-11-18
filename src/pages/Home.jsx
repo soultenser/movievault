@@ -1,5 +1,5 @@
 import FlexContainer from "../components/movies-container/FlexContainer"
-import MovieCard from "../components/movies-container/MovieCard"
+import MovieCard from "../components/MovieCard"
 import { useMovieDB } from "../hooks/useMovieDB"
 import { useState, useEffect } from "react";
 import PageLayout from "../components/PageLayout";
@@ -26,14 +26,14 @@ export default function Home() {
 		}
 		load();
 		
-	},[]);
+	}, [movies]);
 
 	return (
 		<PageLayout
 			detailOpen={detailOpen}
 			detailContent={
 				selected && (
-					<SavedMovieDetail movie={selected} onClose={() => setDetailOpen(false)}/>
+					<SavedMovieDetail movie={selected} onClose={() => setDetailOpen(false)} store="toWatch" />
 				)
 			}
 		>
