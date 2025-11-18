@@ -39,7 +39,7 @@ export default function Navbar()
             </ul>
         </nav>
 
-        <nav className="md:hidden block fixed bottom-0 left-0 bg-primary text-neutral border-2 border-accent">
+        <nav className="md:hidden block fixed bottom-0 left-0 bg-primary text-neutral z-50">
             <ul className="grid grid-cols-4 md:hidden fixed bottom-0 left-0 bg-primary w-full p-4 text-sm">
                 <li>
                     <Link to="/" className="focus:text-accent hover:text-accent flex flex-col text-center justify-center items-center gap-2"> 

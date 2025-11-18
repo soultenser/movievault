@@ -2,11 +2,21 @@ import FlexContainer from "../components/movies-container/FlexContainer"
 import MovieCard from "../components/movies-container/MovieCard"
 import { useMovieDB } from "../hooks/useMovieDB"
 import { useState, useEffect } from "react";
+import PageLayout from "../components/PageLayout";
+import SavedMovieDetail from "../components/SavedMovieDetail";
 
 export default function Home() {
 
 	const { getAllMovies } = useMovieDB();
 	const [movies, setMovies] = useState([]);
+
+	const [detailOpen, setDetailOpen] = useState(false);
+  	const [selected, setSelected] = useState(null);
+
+  	const openDetail = (movie) => {
+    setSelected(movie);
+    setDetailOpen(true);
+	};
 
 	useEffect(() => {
 
@@ -19,15 +29,19 @@ export default function Home() {
 	},[]);
 
 	return (
-    	<div className="pr-4 pl-4 md:pr-0 md:pl-0 lg:flex lg:gap-8">
-			<FlexContainer>
-				{movies.map(movie => (
-					<MovieCard movie={movie} Key={movie.id} />
-				))}
-			</FlexContainer>
-			<aside className="bg-panel w-2/5 rounded-2xl hidden xl:block">
-
-			</aside>
-		</div>
+		<PageLayout
+			detailOpen={detailOpen}
+			detailContent={
+				selected && (
+					<SavedMovieDetail movie={selected} onClose={() => setDetailOpen(false)}/>
+				)
+			}
+		>
+		<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 p-8 md:p-0">
+        	{movies.map((movie) => (
+          		<MovieCard key={movie.id} movie={movie} onOpen={openDetail} />
+        	))}
+      	</div>
+		</PageLayout>
 	);
 }

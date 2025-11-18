@@ -20,9 +20,9 @@ function App() {
 				<Header />
 			<div className="font-display md:flex">
 				<Navbar />
-				<main className="h-auto w-full md:mt-20 2xl:ml-77 md:ml-35 lg:ml-45 md:mr-8 mb-20 bg-primary">
+				<div className="h-auto w-full md:mt-20 2xl:ml-77 md:ml-35 lg:ml-45 md:mr-8 mb-20 bg-primary">
 					<Outlet />
-				</main>
+				</div>
 			</div>
 		</div>
 	)
