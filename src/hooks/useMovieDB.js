@@ -36,6 +36,12 @@ export function useMovieDB() {
     if (movie) await db[storeName].delete(movie.id);
   };
 
+  const removeFromAll = (movieId) => {
+    removeMovie("favorites", movieId);
+    removeMovie("watched", movieId);
+    removeMovie("toWatch", movieId);
+  }
+
   const getAllMovies = async (storeName) => {
     return await db[storeName].toArray();
   };
@@ -55,6 +61,7 @@ export function useMovieDB() {
     loading,
     addMovie,
     removeMovie,
+    removeFromAll,
     getAllMovies,
     getMovie,
     updateMovie

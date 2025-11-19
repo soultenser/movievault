@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
-import MultiButton from "./MultiButton";
+import MultiButton from "./buttons/MultiButton";
 import { useTranslation } from "react-i18next";
 
 

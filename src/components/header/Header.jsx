@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import SearchBar from "./SearchBar";
-import AddMovieButton from "../AddMovieButton";
+import AddMovieButton from "../buttons/AddMovieButton";
 import AddMovieModal from "../AddMovieModal";
 
 export default function Header() {

@@ -1,4 +1,3 @@
-import FlexContainer from "../components/movies-container/FlexContainer"
 import MovieCard from "../components/MovieCard"
 import { useMovieDB } from "../hooks/useMovieDB"
 import { useState, useEffect } from "react";

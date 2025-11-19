@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStopwatch, faCalendar, faStar } from "@fortawesome/free-solid-svg-icons";
 import { useTranslation } from "react-i18next";
 import  { useMovieDB }  from "../hooks/useMovieDB";
-import AddMovieButton from "../components/AddMovieButton";
+import AddMovieButton from "../components/buttons/AddMovieButton";
 
 export default function MovieDetail() {
   const { id } = useParams();
